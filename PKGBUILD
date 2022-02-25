@@ -54,4 +54,8 @@ package() {
   install -Dm644 "${srcdir}/${pkgname}/usr/share/doc/${pkgname/-sdp/}/copyright" "${pkgdir}/usr/share/licenses/${pkgname}/copyright"
   install -Dm644 "${srcdir}/${pkgname}/usr/share/doc/${pkgname/-sdp/}/LICENSE.github" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.github"
   install -Dm644 "${srcdir}/${pkgname}/usr/share/doc/${pkgname/-sdp/}/LICENSES.chromium.html.bz2" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSES.chromium.html.bz2"
+
+  # pkcs#11 is either linked to or tries to dlopen() libdl.so.
+  # Install a symlink until Appgate Inc fixes this.
+  ln -s /usr/lib/libdl.so.2 "${pkgdir}/opt/appgate/service/libdl.so"
 }
