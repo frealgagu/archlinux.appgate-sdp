@@ -3,7 +3,7 @@
 
 pkgname=appgate-sdp
 pkgver=6.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Appgate SDP (Software Defined Perimeter) desktop client"
 arch=("x86_64")
 url="https://www.${pkgname%%-*}.com/support/software-defined-perimeter-support"
@@ -32,6 +32,9 @@ prepare() {
 
   # Remove unnecessary .deb related directory
   rm -rf "${srcdir}/${pkgname}/etc/init.d"
+
+  # Remove url from exec command
+  sed -i "s/ --url=%u//" "${srcdir}/${pkgname}/usr/share/applications/appgate.desktop"
 }
 
 package() {

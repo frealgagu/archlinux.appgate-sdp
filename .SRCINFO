@@ -1,7 +1,7 @@
 pkgbase = appgate-sdp
 	pkgdesc = Appgate SDP (Software Defined Perimeter) desktop client
 	pkgver = 6.4.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://www.appgate.com/support/software-defined-perimeter-support
 	arch = x86_64
 	license = custom
