@@ -1,7 +1,7 @@
 pkgbase = appgate-sdp
 	pkgdesc = Appgate SDP (Software Defined Perimeter) desktop client
-	pkgver = 6.4.1
-	pkgrel = 2
+	pkgver = 6.4.2
+	pkgrel = 1
 	url = https://www.appgate.com/support/software-defined-perimeter-support
 	arch = x86_64
 	license = custom
@@ -19,9 +19,9 @@ pkgbase = appgate-sdp
 	options = staticlibs
 	options = !strip
 	options = !emptydirs
-	source = https://bin.appgate-sdp.com/6.4/client/appgate-sdp_6.4.1_amd64.deb
+	source = https://bin.appgate-sdp.com/6.4/client/appgate-sdp_6.4.2_amd64.deb
 	source = 10-appgate-tun.network
-	sha256sums = c276a8d16d37be957d1cc9d45c4637a5feb78cdde00768c4c5fb80d61b06d342
+	sha256sums = c45a410ba5fde42d35c147f32776b490ccfcf7c93a048b64a492dc5267ddee86
 	sha256sums = 2eb0daa10429e67d703cceccd34069da3044d99c5652658ec73c7a01c88b64e9
 
 pkgname = appgate-sdp
